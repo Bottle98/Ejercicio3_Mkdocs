@@ -1,1 +1,9 @@
-site_name: My Docs
+site_name: Apuntes con MkDocs
+
+nav:
+  - Inicio: index.md
+  - Ejercicio 1: UD4 - Instalación de servicios de directorios.md
+
+theme:
+  name: material
+  language: es
