@@ -1,0 +1,875 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Ejercicio 1 - Apuntes con MkDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-4-instalacion-de-servicios-de-directorios" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Apuntes con MkDocs" class="md-header__button md-logo" aria-label="Apuntes con MkDocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes con MkDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ejercicio 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Apuntes con MkDocs" class="md-nav__button md-logo" aria-label="Apuntes con MkDocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes con MkDocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Ejercicio 1
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejercicio 1
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-operativo-de-red-sor" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Sistema Operativo de Red (SOR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Sistema Operativo de Red (SOR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#los-ordenadores-necesitan-un-sistema-operativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Los ordenadores necesitan un sistema operativo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diferencias-entre-sistemas-operativos-estandar-y-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Diferencias entre sistemas operativos estándar y de red
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#administracion-de-redes-entre-iguales-p2p" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤝 Administración de redes entre iguales (P2P)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🤝 Administración de redes entre iguales (P2P)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problemas-de-administracion-y-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Problemas de administración y seguridad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-cliente-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Estructura cliente-servidor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Estructura cliente-servidor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔑 Ventajas principales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problemas-con-multiples-servidores" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Problemas con múltiples servidores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗂️ Servicios de Directorio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗂️ Servicios de Directorio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎓 Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-un-servicio-de-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      📁 Estructura de un servicio de directorio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identificacion-y-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 Identificación y acceso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-de-servicios-de-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Ejemplos de servicios de directorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocolo-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Protocolo LDAP
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-operativo-de-red-sor" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Sistema Operativo de Red (SOR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Sistema Operativo de Red (SOR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#los-ordenadores-necesitan-un-sistema-operativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Los ordenadores necesitan un sistema operativo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diferencias-entre-sistemas-operativos-estandar-y-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Diferencias entre sistemas operativos estándar y de red
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#administracion-de-redes-entre-iguales-p2p" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤝 Administración de redes entre iguales (P2P)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🤝 Administración de redes entre iguales (P2P)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problemas-de-administracion-y-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Problemas de administración y seguridad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-cliente-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Estructura cliente-servidor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Estructura cliente-servidor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔑 Ventajas principales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problemas-con-multiples-servidores" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Problemas con múltiples servidores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗂️ Servicios de Directorio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗂️ Servicios de Directorio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎓 Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-un-servicio-de-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      📁 Estructura de un servicio de directorio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identificacion-y-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 Identificación y acceso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-de-servicios-de-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Ejemplos de servicios de directorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocolo-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Protocolo LDAP
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="unidad-4-instalacion-de-servicios-de-directorios">🧠 Unidad 4 — Instalación de Servicios de Directorios</h1>
+<hr />
+<h2 id="sistema-operativo-de-red-sor">🔹 Sistema Operativo de Red (SOR)</h2>
+<p>Un <strong>Sistema Operativo de Red (SOR)</strong> es un software que gestiona la infraestructura de una red informática, garantizando que los equipos puedan <strong>compartir recursos de manera segura y eficiente</strong>.<br />
+Sin un SOR, las redes grandes serían un caos: no habría control centralizado sobre archivos, accesos ni seguridad.</p>
+<p><img alt="Ejemplo de red informática" src="../Images/Imagen1.png" /></p>
+<p><em>Figura 1. Ejemplo de red informática general.</em></p>
+<hr />
+<h3 id="los-ordenadores-necesitan-un-sistema-operativo">💻 Los ordenadores necesitan un sistema operativo</h3>
+<p>Así como un ordenador individual necesita un sistema operativo (Windows, Linux o macOS) para funcionar, una red con varios equipos <strong>requiere un SOR</strong> para gestionar usuarios, permisos y comunicaciones.</p>
+<hr />
+<h2 id="diferencias-entre-sistemas-operativos-estandar-y-de-red">⚙️ Diferencias entre sistemas operativos estándar y de red</h2>
+<p>Los <strong>sistemas operativos tradicionales</strong> (Windows, macOS, Linux de escritorio) gestionan un único equipo.<br />
+Los <strong>SOR</strong>, en cambio, gestionan toda la red, controlando dispositivos, usuarios y recursos compartidos.</p>
+<p><img alt="Arquitectura de un SOR" src="../Images/Imagen2.png" /></p>
+<p><em>Figura 2. Esquema básico de un sistema operativo de red.</em></p>
+<hr />
+<h2 id="administracion-de-redes-entre-iguales-p2p">🤝 Administración de redes entre iguales (P2P)</h2>
+<p>Las <strong>redes entre iguales</strong> (<em>peer-to-peer / P2P</em>) permiten compartir archivos sin un servidor central:<br />
+cada equipo actúa como <strong>cliente y servidor</strong> al mismo tiempo.</p>
+<p><img alt="Red P2P" src="../Images/Imagen3.png" /></p>
+<p><em>Figura 3. Ejemplo de red entre iguales (P2P).</em></p>
+<h3 id="problemas-de-administracion-y-seguridad">🔐 Problemas de administración y seguridad</h3>
+<ul>
+<li>Cada usuario decide qué compartir → riesgo de exposición de información.  </li>
+<li>Sin organización, los archivos son difíciles de localizar.  </li>
+<li>Microsoft introdujo los <strong>grupos de trabajo</strong> para mejorar la organización, pero <strong>sin resolver la seguridad</strong>.</li>
+</ul>
+<hr />
+<h2 id="estructura-cliente-servidor">🧩 Estructura cliente-servidor</h2>
+<p>El <strong>modelo cliente-servidor</strong> divide las tareas entre:
+- <strong>Servidor →</strong> proporciona servicios o recursos (correo, archivos, bases de datos...).<br />
+- <strong>Cliente →</strong> solicita y utiliza esos servicios.</p>
+<p><img alt="Modelo cliente-servidor" src="../Images/Imagen4.png" /></p>
+<p><em>Figura 4. Comunicación cliente-servidor.</em></p>
+<h3 id="ventajas-principales">🔑 Ventajas principales</h3>
+<ul>
+<li>Centraliza datos y seguridad.  </li>
+<li>Mejora la organización y escalabilidad.  </li>
+<li>Permite añadir nuevos clientes sin afectar al sistema.</li>
+</ul>
+<hr />
+<h2 id="problemas-con-multiples-servidores">⚠️ Problemas con múltiples servidores</h2>
+<p>Ejemplo con tres servidores:</p>
+<table>
+<thead>
+<tr>
+<th>Servidor</th>
+<th>Función principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Aplicaciones empresariales</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Correo electrónico</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Bases de datos y documentos</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dificultades comunes:</strong>
+- Credenciales duplicadas por cada servidor.<br />
+- Contraseñas no sincronizadas.<br />
+- Baja y alta de usuarios manual.<br />
+- Riesgo de errores y descoordinación.</p>
+<hr />
+<h2 id="servicios-de-directorio">🗂️ Servicios de Directorio</h2>
+<p>Un <strong>servicio de directorio</strong> es un sistema que <strong>almacena, organiza y gestiona información</strong> sobre usuarios, dispositivos y recursos de red.</p>
+<p><img alt="Ejemplo de servicio de directorio" src="../Images/Imagen5.png" /></p>
+<p><em>Figura 5. Ejemplo de directorio centralizado.</em></p>
+<h3 id="ejemplo">🎓 Ejemplo</h3>
+<blockquote>
+<p>En una universidad, los profesores acceden a calificaciones y documentos;<br />
+los alumnos, solo a materiales de clase.<br />
+Todo se gestiona automáticamente desde el servicio de directorio.</p>
+</blockquote>
+<hr />
+<h3 id="estructura-de-un-servicio-de-directorio">📁 Estructura de un servicio de directorio</h3>
+<p>Cada recurso se considera un <strong>objeto</strong> con <strong>atributos</strong> asociados:</p>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nombre</td>
+<td>Carlos Pérez</td>
+</tr>
+<tr>
+<td>Cargo</td>
+<td>Administrador de TI</td>
+</tr>
+<tr>
+<td>Correo</td>
+<td>carlos@empresa.com</td>
+</tr>
+<tr>
+<td>Acceso a</td>
+<td>Servidor de archivos, correo, VPN</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Estructura jerárquica" src="../Images/Imagen6.png" /></p>
+<p><em>Figura 6. Jerarquía de dominios, unidades organizativas y grupos.</em></p>
+<p><strong>Componentes principales:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Directorio</strong></td>
+<td>Base de datos con la información de la red.</td>
+</tr>
+<tr>
+<td><strong>Dominio</strong></td>
+<td>Conjunto de objetos dentro del directorio.</td>
+</tr>
+<tr>
+<td><strong>Objeto</strong></td>
+<td>Recurso (usuario, equipo, impresora...).</td>
+</tr>
+<tr>
+<td><strong>Unidad organizativa (OU)</strong></td>
+<td>Agrupa objetos por área o departamento.</td>
+</tr>
+<tr>
+<td><strong>Grupo</strong></td>
+<td>Conjunto de usuarios con permisos similares.</td>
+</tr>
+<tr>
+<td><strong>Controlador de dominio</strong></td>
+<td>Servidor que gestiona la base de datos.</td>
+</tr>
+<tr>
+<td><strong>Catálogo global</strong></td>
+<td>Contiene información resumida de todos los objetos.</td>
+</tr>
+<tr>
+<td><strong>Maestro de operaciones</strong></td>
+<td>Gestiona funciones críticas.</td>
+</tr>
+<tr>
+<td><strong>Árbol / Bosque</strong></td>
+<td>Estructuras jerárquicas de dominios.</td>
+</tr>
+<tr>
+<td><strong>Esquema</strong></td>
+<td>Define la estructura de los objetos.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="identificacion-y-acceso">🧾 Identificación y acceso</h2>
+<p>Cada objeto tiene un <strong>DN (Distinguished Name)</strong> único.<br />
+El sistema <strong>DNS</strong> se utiliza para gestionar estos nombres, igual que en Internet.</p>
+<hr />
+<h2 id="ejemplos-de-servicios-de-directorio">🧱 Ejemplos de servicios de directorio</h2>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Active Directory (AD)</strong></td>
+<td>Solución de Microsoft. Amplio uso en empresas.</td>
+</tr>
+<tr>
+<td><strong>OpenLDAP</strong></td>
+<td>Implementación libre para Linux.</td>
+</tr>
+<tr>
+<td><strong>SambaLDAP</strong></td>
+<td>Integra OpenLDAP, Kerberos y Samba para compatibilidad Windows/Linux.</td>
+</tr>
+<tr>
+<td><strong>Otros</strong></td>
+<td>Novell Directory Services, Red Hat Directory Server, Apache Directory, etc.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="protocolo-ldap">🌐 Protocolo LDAP</h2>
+<p><strong>LDAP (Lightweight Directory Access Protocol)</strong> permite acceder y consultar servicios de directorio.<br />
+Es esencial en redes corporativas y educativas.</p>
+<p><img alt="Funcionamiento LDAP" src="../Images/Imagen7.png" /></p>
+<p><em>Figura 7. Esquema del funcionamiento del protocolo LDAP.</em></p>
+<hr />
+<p>📘 <em>Fin de la unidad – Instalación de servicios de directorios.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

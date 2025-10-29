@@ -1,4 +1,6 @@
 site_name: Apuntes con MkDocs
+docs_dir: md
+site_dir: docs
 
 nav:
   - Inicio: index.md
